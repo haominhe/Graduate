@@ -1,0 +1,23 @@
+Get Program to Run:
+Run command 'node index.js' in the terminal (under the path: /WebFormProject/backend)
+
+
+You may want to open the html files in your web browser:
+
+/WebFormProject/frontend/index.html
+
+/WebFormProject/frontend/confirmation.html
+
+/WebFormProject/frontend/guests.html
+
+http://localhost:8080/registered
+
+
+Note:
+If you encounter some strange errors, try turn on cors icon on the upper right of 
+your browser window.
+Run 'node index.js' again.
+
+
+References:
+https://stackoverflow.com/

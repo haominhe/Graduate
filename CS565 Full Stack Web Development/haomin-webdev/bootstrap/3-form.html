@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+	/>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		body {
+			padding-top: 20px;
+		}
+
+		.col-form-label {
+			font-weight: bold;
+			text-align: right;
+		}
+
+		.form-check-input {
+			margin-top: 9px;
+		}
+
+		.form-check-label {
+			line-height: 1.75;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<!-- use col-sm-2 as well as col-sm-8 in the exercises, just like in the examples in the slides. -->
+		<form>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label text-right">name:</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="text">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label text-right">gender:</label>
+				<div class="col-sm-8">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+						<label class="form-check-label" for="exampleRadios1">
+							male </label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+						<label class="form-check-label" for="exampleRadios1">
+							female </label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+						<label class="form-check-label" for="exampleRadios1">
+							other </label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label text-right">major:</label>
+				<div class="col-sm-8">
+					<select class="form-control" multiple size="3">
+						<option value="1">math</option>
+						<option selected value="2">computer science</option>
+						<option value="3">physics</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label text-right">notes:</label>
+				<div class="col-sm-8">
+					<textarea class="form-control" type="text-box"></textarea>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label text-right"></label>
+				<div class="col-sm-8">
+					<button type="submit" class="btn btn-primary">submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+
+		<script type="text/javascript">
+			var objectStrings = {};
+
+			var functionInsert = function(strKey, strValue) {
+				// insert the property with strKey and strValue into objectStrings
+				//Reference: https://stackoverflow.com/questions/1168807/how-can-i-add-a-key-value-pair-to-a-javascript-object
+				
+				var propertyName = strKey;
+				var propertyValue = strValue;
+				objectStrings[propertyName] = propertyValue;
+			};
+
+			var functionDelete = function(strKey) {
+				// remove the property with strKey from objectStrings
+				//References: https://www.w3schools.com/js/js_properties.asp
+				
+				delete objectStrings[strKey];
+			};
+
+			var functionLookup = function(strKey) {
+				// return the strValue from objectStrings that is associated with strKey
+
+				// objectStrings might not contain strKey
+				// should this be the case, return an empty string
+				//References: https://stackoverflow.com/questions/2647867/how-to-determine-if-variable-is-undefined-or-null
+			
+				if (strKey in objectStrings){
+					return objectStrings[strKey];
+				}
+				return '';
+			};
+
+			var functionKeys = function() {
+				// return a string of the concatenated strKey in objectStrings, separated by commas
+				//return objectStrings.reduce(function (a, b) {return (a.strKey || a) + ", " + b.strKey})
+				
+				var elements = [];
+				outstring = '';
+				for (x in objectStrings) {
+    				elements.push(x);
+				}
+				outstring = (elements.join(', '));
+				return outstring;
+			};
+
+			functionInsert('hello', 'world');
+			functionInsert('lorem', 'ipsum');
+			functionInsert('sit', 'amet');
+			console.log(functionKeys()); // expected: 'hello, lorem, sit' (order may be different)
+			console.log(functionLookup('lorem')); // expected: 'ipsum'
+			functionDelete('lorem');
+			console.log(functionKeys()); // expected: 'hello, sit' (order may be different)
+			console.log(functionLookup('lorem')); // expected: ''
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

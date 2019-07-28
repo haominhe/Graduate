@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <body>
+
+  <table border="1">
+   <tr>
+    <th>attribute</th>
+    <th>value</th>
+   </tr>
+   <tr>
+    <td>name</td>
+    <td><input type="text" name="name" placeholder="name"></td>
+   </tr>
+   
+   <tr>
+    <td>gender</td>
+    <td><input type="radio" name="gender" value="male">male<br>
+    <input type="radio" name="gender" value="female">female<br>
+    <input type="radio" name="gender" value="other" checked>other</td>
+   </tr>
+
+   <tr>
+    <td>major</td>
+    <td><select name="major" size="3">
+    <option value="math">math</option>
+    <option value="computer science" selected>computer science</option>
+    <option value="physics">physics</option>
+    </select></td>
+   </tr>
+
+   <tr>
+    <td colspan="2">anything else?<br>
+    <textarea name="comments" rows="2" maxlength="200" cols="20"></textarea>
+    </td>
+   </tr>
+
+   <tr>
+    <td colspan="2"><input type="button" value="submit"></td>
+   </tr>
+
+  </table>
+ </body>
+</html>

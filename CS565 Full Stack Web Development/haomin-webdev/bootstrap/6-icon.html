@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+	/>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	/>
+
+	<style type="text/css">
+		body {
+			padding-top: 20px;
+		}
+
+		.form-control {
+			width: auto !important;
+			/* the grading server does not support flexbox */
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- use an inline form to accomplish the horizontal layout. -->
+	<div class="container">
+		<form class="form-inline">
+			<div class="input-group mb-2 mr-sm-2">
+				<label class="sr-only" for="inlineFormInputGroup">Username</label>
+				<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="amount">
+				<div class="input-group-append">
+					<div class="input-group-text">
+							<i class="fa fa-usd"></i> 
+
+					</div>
+				</div>
+			</div>
+			
+			<button type="button" class="btn btn-primary mb-2 mr-sm-2">
+				<i class="fa fa-shopping-cart"></i> 
+			</button>
+			
+			<button type="button" class="btn btn-primary mb-2 mr-sm-2">
+				<i class="fa fa-trash"></i> 
+			</button>
+		</form>
+
+	
+	</div>
+</body>
+
+</html>

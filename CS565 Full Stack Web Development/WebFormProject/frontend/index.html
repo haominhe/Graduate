@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- load stylesheet first, content delivery, html body, script -->
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light mb-5" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="./index.html">
+            <b>WEDDING REGISTRATION</b>
+        </a>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">WEDDING REGISTRATION</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">OUR ADVENTURE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">OUR FAMILY</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- create form -->
+    <div id="form_container" class="container maxHeight">
+
+        <div class="row maxHeight">
+            <div class="col-md-6 offset-md-3 maxHeight">
+                <ul id="outer_form_group" class="scrollbar">
+                    <li>
+                    <form style="background-color: rgba(255, 255, 255, 0.5); padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                        <div class="form-group">
+                            <label for="name">FIRST NAME & LAST NAME</label>
+                            <input class="form-control" id="name" placeholder="ENTER FIRST NAME & LAST NAME">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">EMAIL ADDRESS</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="ENTER EMAIL">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="vegetarian">
+                            <label class="form-check-label" for="vegetarian">VEGETARIAN</label>
+                        </div>
+                        <button id="add_guest" type="button" class="btn btn-success" style="margin-top:5px">
+                            <i class="fa fa-user-circle"></i> &nbsp;ADDITIONAL GUEST</button>
+                    </form>
+                </li>
+                </ul>
+
+                <button id="submit_form" type="submit" class="btn btn-primary">SUBMIT</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="javascript/form.js"></script>
+
+</body>
+
+</html>

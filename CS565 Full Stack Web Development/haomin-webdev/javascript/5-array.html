@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+
+		<script type="text/javascript">
+			//References: https://stackoverflow.com/questions/9792927/javascript-array-search-and-remove-string
+			//https://www.w3schools.com/js/js_array_methods.asp
+			var intArray = [];
+
+			var functionInsert = function(intNumber) {
+				// insert intNumber into intArray
+				intArray.push(intNumber);
+				//console.log(intArray);
+			};
+
+			var functionDelete = function(intNumber) {
+				// remove the first occurrence of intNumbers in intArray
+
+				// intArray might not contain intNumber
+				// the function does not have an effect in this case
+
+				var search_term = intNumber;
+				for (i=0; i<intArray.length; i++) {
+    				if (intArray[i] === search_term) {
+        				intArray.splice(i, 1);
+        				break;       //<-- Uncomment  if only the first term has to be removed
+   					}
+				}
+				//console.log(intArray);
+			};
+
+			var functionLookup = function(intIndex) {
+				// return the intNumber from intArray at intIndex, deleting the obtained intNumber
+
+				// intIndex might be out of bounds
+				// should this be the case, return null
+
+				//console.log(intArray);
+				if(intIndex > intArray.length || intIndex < 0){
+					return null;
+				}
+				var outvalue = intArray[intIndex];
+				intArray.splice(intIndex, 1);
+				//console.log(intArray);
+				return outvalue;
+			};
+
+			var functionValues = function() {
+				// return a string of the concatenated intNumber in intArray, separated by commas
+				return intArray.join(', ');
+				
+			};
+
+			functionInsert(1);
+			functionInsert(2);
+			functionInsert(3);
+			functionInsert(2);
+			functionInsert(1);
+			console.log(functionValues()); // expected: '1, 2, 3, 2, 1'
+			console.log(functionLookup(1)); // expected: 2
+			console.log(functionValues()); // expected: '1, 3, 2, 1'
+			functionDelete(1);
+			console.log(functionValues()); // expected: '3, 2, 1'
+			console.log(functionLookup(2)); // expected: 1
+			console.log(functionValues()); // expected: '3, 2'
+			functionDelete(-1);
+			console.log(functionLookup(-1)); // expected: null
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

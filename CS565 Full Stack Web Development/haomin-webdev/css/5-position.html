@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+
+		<style type="text/css">
+			#outer {
+				width:300px;
+				height:150px;
+				
+				margin:50px;
+
+				background-color:#CCCCCC;
+				position:relative;
+			}
+
+			#first {
+				position:absolute;
+				left: 10px;
+				top: 10px;
+				background-color:#FFFFFF;
+				display: flex;
+			}
+
+			#second {
+				position:absolute;
+				left: 150px;
+				top: 20px;
+				background-color:#FFFFFF;
+				display: block;
+			}
+			
+			#fixed {
+				position: fixed;
+				left: 0px;
+				bottom: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outer">
+			<div id="first">
+				left: 10 px 
+				<br>
+				top: 10 px
+			</div>
+			<div id="second">
+				left: 150 px
+				<br>
+				top: 20 px
+			</div>
+		</div>
+
+		<div id="fixed">fixed on the bottom left</div>
+	</body>
+</html>
+<!–– Reference:
+https://www.w3schools.com/cssref/pr_class_position.asp
+––>
